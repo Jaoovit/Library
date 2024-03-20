@@ -2,7 +2,7 @@
 
 pseudocode
 
-1 - add some books(objects) in a Array, with author, title, numeber of pages and whether it's been read. []
+1 - add some books(objects) in a Array, with author, title, numeber of pages and whether it's been read. [x]
 
 2 - add a input to get the user information to create a new book. []
 
