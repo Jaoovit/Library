@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    margin: 200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+#book {
+    border: solid 1px whitesmoke;
+    box-shadow: 1px 1px 3px whitesmoke;
+    border-radius: 25px;
+    padding: 25px;
+}
