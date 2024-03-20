@@ -1,14 +1,58 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    background-color: rgb(34, 51, 59);
+    color: white;
+    margin: 0;
+    padding: 30px;
+    font-size: 50px;
+}
+
 .container {
     display: grid;
-    margin: 200px;
+    margin-inline: 200px;
+    margin-top: 100px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 50px;
 }
 
 #book {
+    color:gray;
+    font-size: 20px;
     border: solid 1px whitesmoke;
-    box-shadow: 1px 1px 3px whitesmoke;
+    box-shadow: 1px 1px 5px whitesmoke;
     border-radius: 25px;
     padding: 25px;
+    border-left: solid 5px rgb(234, 224, 213)
+}
+
+.title {
+    font-size: 30px;
+    color: black;
+}
+
+.book-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.open-forms {
+    background-color: white;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    font-size: 70px;
+    border-radius: 50px;
+    border: solid 2px whitesmoke;;
 }
