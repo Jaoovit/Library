@@ -1,6 +1,6 @@
 function Book(author, title, pages, type) {
-    this.title = title;
     this.author = author;
+    this.title = title;
     this.pages = pages;
     this.type = type;
 };
@@ -11,12 +11,19 @@ const book3 = new Book('Adam Smith', 'The Wealth of Nations', '524', 'Economy')
 
 const myLibrary = [book1, book2, book3];
 
-function addBookToLibrary() {
-    const book = new Book ('Aristotle', 'Physics', '420', 'Philosophy')
-    myLibrary.push(book);
-}
+let bookAuthor = document.querySelector('#book-author')
+let bookTitle = document.querySelector('#book-title')
+let bookPages = document.querySelector('#book-pages')
+let bookType = document.querySelector('#book-type')
 
-addBookToLibrary()
+let sendButton = document.querySelector('button[type="submit"]')
+
+sendButton.addEventListener('click', function() {
+    const book = new Book (bookAuthor.value, bookTitle.value, bookPages.value, bookPages.value)
+    myLibrary.push(book);
+
+    console.log(myLibrary)
+})
 
 //book1
 
