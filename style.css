@@ -101,7 +101,14 @@ svg {
     color: gray;
     border: solid 1px whitesmoke;
     box-shadow: 1px 1px 5px whitesmoke;
-    border-radius: 25px;
+    border-radius: 10px;
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+    appearance: none;
+    border-bottom: solid 2px rgb(34, 51, 59);
+    border-right: solid 2px rgb(34, 51, 59);
   }
 
   #close-button {

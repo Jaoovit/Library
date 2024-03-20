@@ -6,7 +6,7 @@ function Book(author, title, pages, type) {
 };
 
 const book1 = new Book('J.R.R. Tolkien', 'The Hobbit', '288', 'Fantasy')
-const book2 = new Book('George Orwell', '1984', '314', 'Romance')
+const book2 = new Book('George Orwell', '1984', '314', 'Dystopian')
 const book3 = new Book('Adam Smith', 'The Wealth of Nations', '524', 'Economy')
 
 const myLibrary = [book1, book2, book3];
