@@ -41,12 +41,13 @@ document.querySelector('.book-three .type').innerHTML += myLibrary[2].type
 
 //book-add-buttom
 
-document.querySelector('.open-forms').addEventListener ('click', function (event) {
-    event.preventDefault();
-    document.querySelector("#popup-window").style.display = 'block';
+document.querySelector('.open-forms').addEventListener ('click', function () {
+    document.querySelector('#popup-window').style.display = 'block';
+    document.querySelector('.container').style = 'opacity: 20%';
 });
 
 document.querySelector('#close-button').addEventListener('click', function() {
-    document.querySelector("#popup-window").style.display = 'none';
+    document.querySelector('#popup-window').style.display = 'none';
+    document.querySelector('.container').style = 'opacity: 100%';
 })
 ;
