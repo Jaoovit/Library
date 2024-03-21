@@ -40,6 +40,22 @@ svg {
     height: 50px;
 }
 
+button > svg {
+  fill: gray;
+  width: 25px;
+  height: 25px;
+  opacity: 50%;
+}
+
+#book > .delete {
+    display:block;
+    margin-left:auto;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
 .title {
     font-size: 30px;
     color: black;
