@@ -43,16 +43,32 @@ sendButton.addEventListener('click', function(event) {
     let type = document.createElement('p')
     type.setAttribute('class', 'type')
     type.innerHTML = 'Type: ' + myLibrary[myLibrary.length -1].type
+
+    let delButton = document.createElement('button')
+    delButton.setAttribute('class', 'delete')
+    delButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>'
     
     div.appendChild(title)
     div.appendChild(author)
     div.appendChild(pages)
     div.appendChild(type)
+    div.appendChild(delButton)
     menu.appendChild(div)
     menu.insertBefore(div, document.querySelector('.book-add'))
 
     document.querySelector('#popup-window').style.display = 'none';
     document.querySelector('.container').style = 'opacity: 100%';
+
+    let del = document.querySelectorAll('.delete')
+    let i;
+
+    for (i = 0; i < del.length; i++) {
+        del[i].onclick = function() {
+        let div = this.parentElement;
+        div.remove() 
+    }
+    
+}
 })
 
 //book1
@@ -89,12 +105,28 @@ document.querySelector('#close-button').addEventListener('click', function() {
 })
 ;
 
-let del = document.querySelector('.delete')
 
-del.addEventListener('mouseenter', function() {
-    del.innerHTML = '<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.37,8.91L19.37,10.64L7.24,3.64L8.24,1.91L11.28,3.66L12.64,3.29L16.97,5.79L17.34,7.16L20.37,8.91M6,19V7H11.07L18,11V19A2,2 0 0,1 16,21H8A2,2 0 0,1 6,19Z" /></svg>'
+
+let del = document.querySelectorAll('.delete')
+let i;
+
+for (i = 0; i < del.length; i++) {
+    del[i].onclick = function() {
+        let div = this.parentElement;
+        div.remove();
+    }
+}
+
+
+
+
+
+/*
+del[0].addEventListener('mouseenter', function() {
+    del[0].innerHTML = '<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.37,8.91L19.37,10.64L7.24,3.64L8.24,1.91L11.28,3.66L12.64,3.29L16.97,5.79L17.34,7.16L20.37,8.91M6,19V7H11.07L18,11V19A2,2 0 0,1 16,21H8A2,2 0 0,1 6,19Z" /></svg>'
 })
 
-del.addEventListener('mouseleave', function() {
-    del.innerHTML = '<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>'
+del[0].addEventListener('mouseleave', function() {
+    del[0].innerHTML = '<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>'
 })
+*/
