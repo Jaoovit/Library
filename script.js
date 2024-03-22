@@ -1,3 +1,5 @@
+const myLibrary = [];
+
 function Book(author, title, pages, type) {
     this.author = author;
     this.title = title;
@@ -9,7 +11,9 @@ const book1 = new Book('J.R.R. Tolkien', 'The Hobbit', '288', 'Fantasy')
 const book2 = new Book('George Orwell', '1984', '314', 'Dystopian')
 const book3 = new Book('Adam Smith', 'The Wealth of Nations', '524', 'Economy')
 
-const myLibrary = [book1, book2, book3];
+myLibrary.push(book1)
+myLibrary.push(book2)
+myLibrary.push(book3)
 
 
 const menu = document.querySelector('.container')
@@ -30,19 +34,19 @@ sendButton.addEventListener('click', function(event) {
 
     let title = document.createElement('p')
     title.setAttribute('class','title')
-    title.innerHTML = myLibrary[myLibrary.length -1].title
+    title.innerHTML = book.title
 
     let author = document.createElement('p')
     author.setAttribute('class', 'author')
-    author.innerHTML = 'Author: ' + myLibrary[myLibrary.length -1].author
+    author.innerHTML = 'Author: ' + book.author
 
     let pages = document.createElement('p')
     pages.setAttribute('class', 'pages')
-    pages.innerHTML = 'Pages: ' + myLibrary[myLibrary.length -1].pages
+    pages.innerHTML = 'Pages: ' + book.pages
 
     let type = document.createElement('p')
     type.setAttribute('class', 'type')
-    type.innerHTML = 'Type: ' + myLibrary[myLibrary.length -1].type
+    type.innerHTML = 'Type: ' + book.type
 
     let delButton = document.createElement('button')
     delButton.setAttribute('class', 'delete')
@@ -65,9 +69,7 @@ sendButton.addEventListener('click', function(event) {
     for (i = 0; i < del.length; i++) {
         del[i].onclick = function() {
         let div = this.parentElement;
-        div.remove()
-        myLibrary.pop()
-        console.log(myLibrary) 
+        div.remove();
     }
     
 }
@@ -106,6 +108,7 @@ document.querySelector('#close-button').addEventListener('click', function() {
     document.querySelector('.container').style = 'opacity: 100%';
 })
 ;
+
 
 let del = document.querySelectorAll('.delete')
 let i;
