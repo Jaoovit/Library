@@ -17,7 +17,7 @@ header > h1 {
 
 .container {
     display: grid;
-    margin-inline: 200px;
+    margin-inline: 100px;
     margin-top: 100px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -154,4 +154,11 @@ button > svg {
     padding-bottom: 10px;
     padding-inline: 20px;
     opacity: 80%;
+  }
+
+  @media only screen and (max-width: 1000px) {
+  
+    .container {
+      grid-template-columns: 1fr;
+    }
   }
