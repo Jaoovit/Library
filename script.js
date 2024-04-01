@@ -8,6 +8,11 @@ class Book {
         this.pages = pages;
         this.type = type;
     };
+
+    static createBook() {
+        const book = new Book (bookAuthor.value, bookTitle.value, bookPages.value, bookType.value);
+        this.myLibrary.push(book);
+    }
 }
 
 const book1 = new Book('J.R.R. Tolkien', 'The Hobbit', '288', 'Fantasy');
@@ -61,9 +66,7 @@ function createBook(book) {
 
 sendButton.addEventListener('click', function(event) {
     event.preventDefault();
-    const book = new Book (bookAuthor.value, bookTitle.value, bookPages.value, bookType.value);
-
-    myLibrary.push(book);
+    Book.createBook()
 
     refreshBooks();
 
