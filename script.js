@@ -1,19 +1,22 @@
-const myLibrary = [];
+class Book {
 
-function Book(author, title, pages, type) {
-    this.author = author;
-    this.title = title;
-    this.pages = pages;
-    this.type = type;
-};
+    static myLibrary = []
+
+    constructor(author, title, pages, type) {
+        this.author = author;
+        this.title = title;
+        this.pages = pages;
+        this.type = type;
+    };
+}
 
 const book1 = new Book('J.R.R. Tolkien', 'The Hobbit', '288', 'Fantasy');
 const book2 = new Book('George Orwell', '1984', '314', 'Dystopian');
 const book3 = new Book('Adam Smith', 'The Wealth of Nations', '524', 'Economy');
 
-myLibrary.push(book1);
-myLibrary.push(book2);
-myLibrary.push(book3);
+Book.myLibrary.push(book1);
+Book.myLibrary.push(book2);
+Book.myLibrary.push(book3);
 
 
 const menu = document.querySelector('.container');
@@ -70,14 +73,14 @@ sendButton.addEventListener('click', function(event) {
 });
 
 function refreshBooks() {
-    console.log(myLibrary);
+    console.log(Book.myLibrary);
 
     document.querySelectorAll('#book').forEach((book) => {
         book.remove();
     });
 
 
-myLibrary.forEach((book) => {
+Book.myLibrary.forEach((book) => {
     const div = createBook(book);
     menu.appendChild(div);
     menu.insertBefore(div, document.querySelector(".book-add"))
